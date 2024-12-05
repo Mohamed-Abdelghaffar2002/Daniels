@@ -1,0 +1,589 @@
+/* global style */
+html {
+  scroll-padding-top: 4rem;
+  scroll-behavior: smooth;
+}
+body {
+  font-family: "Poppins", sans-serif;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Montserrat", sans-serif;
+}
+img {
+  display: block;
+  width: 100%;
+}
+.title {
+  color: var(--main-color);
+  font-weight: 800;
+  font-size: 2.5rem;
+}
+.title::before {
+  content: "";
+  background-image: url(../images/dot-grid.webp);
+  background-position: center center;
+  background-size: cover;
+  position: absolute;
+  height: 50%;
+  width: 100%;
+  bottom: -10%;
+  z-index: -1;
+}
+:root {
+  --main-color: #343434;
+  --icon-dark-color: #1c1c1c;
+  --bg-light-color: #f4f4f4;
+  --bg-color: #f7f7f7;
+  --card-color: #5b5b5b;
+}
+a {
+  text-decoration: none;
+}
+.fs-12 {
+  font-size: 0.75rem;
+}
+.fs-13 {
+  font-size: 0.75rem;
+  word-spacing: 5px;
+}
+.fs-14 {
+  font-size: 0.875rem;
+}
+.fs-15 {
+  font-size: 0.9375rem;
+}
+.fs-18 {
+  color: var(--main-color);
+  font-size: 1.125rem;
+  font-weight: 800;
+}
+.fs-20 {
+  font-size: 1.25rem;
+}
+.fs-25 {
+  font-size: 1.5625rem;
+}
+.fs-30 {
+  color: var(--main-color);
+  font-size: 1.875rem;
+  font-weight: 900;
+}
+
+.container {
+  width: 75%;
+}
+/*---------- navbar style /*----------*/
+.my-navbar .navbar-nav .nav-link {
+  color: var(--main-color);
+}
+.my-navbar .navbar-nav .nav-link::before {
+  content: "";
+  background-color: var(--main-color);
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  left: 8px;
+  transition: all 0.4s;
+}
+.my-navbar .navbar-nav .nav-link.active:before {
+  width: calc(100% - 16px);
+}
+@media (max-width: 767.98px) {
+  .my-navbar .navbar-nav .nav-link::before {
+    display: none;
+  }
+}
+
+/*---------- header style /*----------*/
+header {
+  background-image: url(../images/bg.jpg);
+  background-position: center center;
+  background-size: cover;
+  padding-top: 4rem;
+}
+.header-section {
+  width: 550px;
+}
+header::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+header .header-section .icons .icon {
+  width: 1.875rem;
+  height: 1.875rem;
+}
+header .header-section h5 {
+  font-size: 3.125rem;
+  font-weight: 800;
+}
+header .header-section h1 {
+  font-size: 3.75rem;
+  font-weight: 200;
+}
+header .header-section h1::after {
+  content: "";
+  animation: typing 6s infinite linear;
+}
+@keyframes typing {
+  1.64% {
+    content: "|";
+  }
+  3.28% {
+    content: "L|";
+  }
+  4.92% {
+    content: "La|";
+  }
+  7.56% {
+    content: "Lar|";
+  }
+  8.2% {
+    content: "Larr|";
+  }
+  9.84% {
+    content: "Larry|";
+  }
+  11.48% {
+    content: "Larry |";
+  }
+  13.12% {
+    content: "Larry D|";
+  }
+  14.76% {
+    content: "Larry Da|";
+  }
+  16.4% {
+    content: "Larry Dan|";
+  }
+  18.04% {
+    content: "Larry Dani|";
+  }
+  19.68% {
+    content: "Larry Danie|";
+  }
+  21.32% {
+    content: "Larry Daniel|";
+  }
+  22.96% {
+    content: "Larry Daniels|";
+  }
+  24.6% {
+    content: "Larry Daniel|";
+  }
+  26.24% {
+    content: "Larry Danie|";
+  }
+  27.88% {
+    content: "Larry Dani|";
+  }
+  29.52% {
+    content: "Larry Dan|";
+  }
+  31.16% {
+    content: "Larry Da|";
+  }
+  32.8% {
+    content: "Larry D|";
+  }
+  34.44% {
+    content: "Larry |";
+  }
+  36.06% {
+    content: "Larry|";
+  }
+  37.72% {
+    content: "Larr|";
+  }
+  39.36% {
+    content: "Lar|";
+  }
+  41% {
+    content: "La|";
+  }
+  42.64% {
+    content: "L|";
+  }
+  44.28% {
+    content: "|";
+  }
+  45.92% {
+    content: "D|";
+  }
+  47.56% {
+    content: "De|";
+  }
+  49.2% {
+    content: "Dev|";
+  }
+  50.84% {
+    content: "Deve|";
+  }
+  52.48% {
+    content: "Devel|";
+  }
+  54.12% {
+    content: "Develo|";
+  }
+  55.76% {
+    content: "Develop|";
+  }
+  57.4% {
+    content: "Develope|";
+  }
+  59.04% {
+    content: "Developer|";
+  }
+  60.68% {
+    content: "Develope|";
+  }
+  62.32% {
+    content: "Develop|";
+  }
+  63.96% {
+    content: "Develo|";
+  }
+  65.6% {
+    content: "Devel|";
+  }
+  67.24% {
+    content: "Deve|";
+  }
+  68.88% {
+    content: "Dev|";
+  }
+  70.52% {
+    content: "|De";
+  }
+  72.16% {
+    content: "D|";
+  }
+  73.8% {
+    content: "|";
+  }
+  75.44% {
+    content: "D|";
+  }
+  77.08% {
+    content: "De|";
+  }
+  78.72% {
+    content: "Des|";
+  }
+  80.36% {
+    content: "Desi|";
+  }
+  82% {
+    content: "Desig|";
+  }
+  83.64% {
+    content: "Design|";
+  }
+  85.28% {
+    content: "Designe|";
+  }
+  86.92% {
+    content: "Designer|";
+  }
+  88.56% {
+    content: "Designe|";
+  }
+  90.2% {
+    content: "Design|";
+  }
+  91.84% {
+    content: "Desig|";
+  }
+  93.48% {
+    content: "Desi|";
+  }
+  95.12% {
+    content: "Des|";
+  }
+  96.76% {
+    content: "De|";
+  }
+  98.4% {
+    content: "D|";
+  }
+  100% {
+    content: "|";
+  }
+}
+
+@media (max-width: 575.98px) {
+  header .header-section h1 {
+    font-size: 35px;
+  }
+}
+
+/*---------- about style /*----------*/
+
+.about-title {
+  color: var(--main-color);
+  font-weight: 800;
+  font-size: 1.875rem;
+}
+.about-image::before {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  left: -10%;
+  bottom: -10%;
+  background-image: url(../images/dot-grid.webp);
+  z-index: -1;
+}
+
+#about .about-image .bg-image {
+  top: 50%;
+  left: -50%;
+}
+
+#about .btn-1,
+.btn-2 {
+  border: black solid 1px;
+  transition: all 0.4s;
+}
+#about .btn-1:hover {
+  background-color: white !important;
+}
+#about .btn-1:hover a {
+  color: black !important;
+}
+
+#about .btn-2:hover {
+  background-color: black !important;
+}
+#about .btn-2:hover a {
+  color: white !important;
+}
+@media (max-width: 575.98px) {
+  #about .container {
+   width:100%;
+  }
+}
+/*---------- services style /*----------*/
+
+#services {
+  background-color: var(--bg-color);
+}
+#services .services-card {
+  background-color: white;
+}
+#services .services-card:hover .icon {
+  background-color: black;
+  color: white;
+}
+#services .icon {
+  width: 4.5rem;
+  height: 4.5rem;
+  font-size: 1.875rem;
+  background-color: var(--bg-light-color);
+  transition: all 0.4s;
+}
+
+@media (max-width: 575.98px) {
+  #services .container {
+   width:100%;
+  }
+}
+
+/*---------- portfolio style /*----------*/
+#portfolio .portfolio-card .layer {
+  overflow: hidden;
+  opacity: 0;
+  position: absolute;
+  height: calc(100% - 10px);
+  top: 20px;
+  left: 5px;
+  right: 5px;
+  background-color: rgba(255, 255, 255, 0.9);
+  transition: all 0.4s;
+}
+#portfolio .portfolio-card .layer:hover {
+  opacity: 1;
+  top: 5px;
+}
+
+#portfolio .portfolio-card .layer .portfolio-icon {
+  font-size: 0.875rem;
+  background-color: var(--main-color);
+  color: white;
+  width: 1.875rem;
+  height: 1.875rem;
+  transition: all 0.4s;
+  border: 1px solid black;
+}
+#portfolio .portfolio-card .layer .portfolio-icon:hover {
+  background-color: white;
+  color: black;
+}
+
+.nav-tabs {
+  border: none;
+}
+.nav-tabs .nav-link {
+  border: none;
+  color: black;
+}
+
+.nav-tabs .nav-link.active {
+  border-bottom: 3px solid black;
+}
+
+@media (max-width: 575.98px) {
+  #portfolio .container {
+   width:100%;
+  }
+}
+
+/*---------- client style /*----------*/
+#clients {
+  background-color: var(--bg-color);
+}
+#clients .container {
+  width: 65%;
+}
+#clients .client-card .client-image {
+  width: 5rem;
+}
+
+.carousel-indicators [data-bs-target] {
+  background-color: var(--main-color);
+  margin-inline: 8px;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
+.counter {
+  padding-block: 90px;
+}
+
+@media (max-width: 575.98px) {
+  #clients .container {
+   width:100%;
+  }
+}
+/*---------- counter style /*----------*/
+
+
+/*---------- team style /*----------*/
+
+#team {
+  background-color: var(--bg-color);
+}
+
+#team .card-body {
+  background-color: #5b5b5b;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+.card-img,
+.card-img-top {
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+
+#team .card-image .layer {
+  overflow: hidden;
+  opacity: 0;
+  transform: rotateY(180deg);
+  position: absolute;
+  height: calc(100% - 200px);
+  top: 100px;
+  left: 100px;
+  right: 100px;
+  background-color: rgba(255, 255, 255, 0.9);
+  transition: all 0.4s;
+}
+#team .card:hover .layer {
+  opacity: 1;
+  transform: rotateY(360deg);
+  height: calc(100% - 10px);
+  top: 5px;
+  left: 5px;
+  right: 5px;
+}
+#team .card-image {
+  overflow: hidden;
+}
+#team .card-image img {
+  transition: all 0.4s;
+}
+#team .card-image:hover img {
+  transform: scale(1.2);
+}
+
+#team .card-image .layer .team-icon {
+  font-size: 0.875rem;
+  background-color: var(--main-color);
+  color: white;
+  width: 2.5rem;
+  height: 2.5rem;
+  transition: all 0.4s;
+  border: 1px solid black;
+}
+#team .card-image .layer .team-icon:hover {
+  background-color: white;
+  color: black;
+}
+
+@media (max-width: 575.98px) {
+  #team .container {
+   width:100%;
+  }
+}
+/*---------- contact style /*----------*/
+#contact .container {
+  width: 65%;
+}
+#contact .icon:hover {
+  background-color: black;
+  color: white;
+}
+#contact .icon {
+  width: 4.5rem;
+  height: 4.5rem;
+  font-size: 1.875rem;
+  background-color: var(--bg-light-color);
+  transition: all 0.4s;
+}
+
+#contact form input {
+  background-color: var(--bg-color);
+}
+#contact form textarea {
+  background-color: var(--bg-color);
+}
+#contact form button {
+  border: solid 1px black;
+  background-color: black;
+  color: white;
+  transition: all 0.4s;
+}
+
+#contact form button:hover {
+  background-color: white;
+  color: black;
+}
+
+@media (max-width: 767.98px) {
+  #contact .container {
+    width: 100%;
+  }
+}
+/* footer style */
+@media (max-width: 575.98px) {
+.footer {
+  padding-inline: 25px;
+}
+
+  }
